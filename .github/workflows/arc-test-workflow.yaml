@@ -1,4 +1,5 @@
 name: ARC Test Workflow
+run-name: Run test workflow on ${{ inputs.arc_name }}
 on:
   workflow_dispatch:
     inputs:
