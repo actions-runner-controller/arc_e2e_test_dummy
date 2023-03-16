@@ -1,1 +1,3 @@
-# arc_e2e_test_dummy
+# ARC End to End testing repository
+
+This repository contains workflows that are used in the end to end testing of the gha-runner-scale-set mode of actions-runner-controller.
