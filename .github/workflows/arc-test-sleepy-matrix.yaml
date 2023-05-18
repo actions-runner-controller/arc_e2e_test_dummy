@@ -1,0 +1,25 @@
+name: ARC Long Running Jobs Matrix
+
+on:
+  workflow_dispatch:
+    inputs:
+      arc_name:
+        description: 'Target ARC name used for `runs-on` in job'
+        required: true
+      delay:
+        description: "How long to sleep in seconds"
+        required: true
+        default: "20"
+
+jobs:
+  arc-runner-job:
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [1, 2, 3]
+    runs-on: ${{ inputs.arc_name }}
+    steps:
+      - name: sleep
+        run: |
+          echo "Hello from: "${{ matrix.version }}
+          sleep ${{ inputs.delay }}
