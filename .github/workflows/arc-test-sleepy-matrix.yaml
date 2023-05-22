@@ -1,5 +1,5 @@
 name: ARC Long Running Jobs Matrix
-
+run-name: Run short sleepy matrix on ${{ inputs.arc_name }}
 on:
   workflow_dispatch:
     inputs:
