@@ -9,7 +9,7 @@ on:
       delay:
         description: "How long to sleep in seconds"
         required: true
-        default: "20"
+        default: "120"
 
 jobs:
   arc-runner-job:
