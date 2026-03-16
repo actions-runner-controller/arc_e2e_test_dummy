@@ -1,0 +1,18 @@
+name: Custom label
+permissions:
+  contents: read
+on:
+  workflow_dispatch:
+    inputs:
+      scaleset-label:
+        required: true
+        type: string
+        description: Label to test the scale set assignment
+        
+jobs:
+  say-hello:
+    runs-on: ${{ inputs.scaleset-label }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run a one-liner
+        run: echo Hello, World!
